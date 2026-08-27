@@ -3,7 +3,7 @@ A multi threaded Python simulation for mocking serial communication. Ideal for t
 
 # Virtual Serial Port Simulator
 
-A lightweight, multi-threaded Python application designed to simulate UART / Serial communication channels in-memory. This tool allows developers to test embedded systems software, data parsers, and logging mechanisms without needing physical microcontrollers (like Arduino or ESP32) or complex virtual driver setups (such as com0com).
+A lightweight, multi-threaded Python application designed to simulate UART / Serial communication channels in memory. This tool allows developers to test embedded systems software, data parsers, and logging mechanisms without needing physical microcontrollers (like Arduino or ESP32) or complex virtual driver setups (such as com0com).
 
 ---
 
@@ -15,9 +15,9 @@ A lightweight, multi-threaded Python application designed to simulate UART / Ser
 ---
 
 # How It Works
-The simulator uses a multi-threaded architecture:
-1.Producer Thread (Microcontroller Simulation): Generates dummy telemetry or sensor data (e.g., temperature values) at regular intervals and pushes them into a thread-safe queue.
-2.Consumer Thread (Application/User Script): Listens to the queue asynchronously, simulates `readline()` behavior, parses incoming strings, and logs timestamps.
+The simulator uses a multi threaded architecture:
+1.Producer Thread (Microcontroller Simulation): Generates dummy telemetry or sensor data (e.g., temperature values) at regular intervals and pushes them into a thread safe queue.
+2.Consumer Thread (Application/User Script): Listens to the queue asynchronously, simulates `readline()` behavior, parses incoming strings and logs timestamps.
 
 ---
 
